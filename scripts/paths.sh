@@ -128,6 +128,9 @@ function set_paths() {
   GIT_BACKUP_INSTALLER="${HS_FILES}/git-backup/git-backup.sh"
   GIT_BACKUP_FILE="${HS_CONFIG_FOLDER}/git-backup.cfg"
   GIT_BACKUP_URL="${HS_FILES}/git-backup/git-backup.cfg"
+
+  #K1BttEddy #
+  $K1BTTEDDY_FOLDER=
   
   # Moonraker Timelapse #
   TIMELAPSE_FILE="${USR_DATA}/moonraker/moonraker/moonraker/components/timelapse.py"

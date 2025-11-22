@@ -27,6 +27,7 @@ function install_menu_ui_k1() {
   menu_option '13' 'Install' 'Screws Tilt Adjust Support'
   menu_option '14' 'Install' 'M600 Support'
   menu_option '15' 'Install' 'Git Backup'
+  menu_option '25' 'Install' 'BttEddy'
   hr
   subtitle '•CAMERA:'
   menu_option '16' 'Install' 'Moonraker Timelapse'
@@ -249,6 +250,13 @@ function install_menu_k1() {
         else
           run "install_simplyprint" "install_menu_ui_k1"
         fi;;
+      25)
+          if [ -d "$K1BTTEDDY_FOLDER" ]; then  
+          error_msg "EddyDuo is already installed!"
+        elif [ ! -d "$MOONRAKER_FOLDER" ] && [ ! -d "$NGINX_FOLDER" ]; then
+          error_msg "Moonraker and Nginx are needed, please install them first!"
+        else
+          run "install_k1btteddy" "install_menu_ui_k1"
       B|b)
         clear; main_menu; break;;
       Q|q)
